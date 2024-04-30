@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FLorida</title>
+</head>
+<body>
+    <Header class="center">Welcome to FLorida</Header>
+    <nav class="center">
+        <a href="index.html">Home</a>
+        <a href="Tallahassee.html">Tallahassee</a>
+        <a href="Miami.html">Miami</a>
+        <a href="Tampa.html">Tampa</a>
+    </nav>
+    <div>
+        <section>
+            <h2>Welcome to Florida</h2>
+            <table>
+                <caption>Florida counties ranked by polulation</caption>
+                <tr>
+                    <td>1.</td>
+                    <td>Miami-Dade County</td>
+                    <td>2,701,767</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Broward County</td>
+                    <td>1,944,375</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Palm Beach County</td>
+                    <td>1,492,191</td>
+                </tr>
+            </table>
+            <p>(U.S. Census Bureau; Census 2020)</p>
+            <p>to learn more about Florida, <a href="https://en.wikipedia.org/wiki/Florida" target="_blank">click here</a>.</p>
+        </section>
+        <aside>
+            <p>For quesions about the state, fill out the form below.</p>
+            <form id="contactForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+                <label for="confirmEmail">Confirm Email:</label>
+                <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email address" required>
+    
+                <!-- Adding a text box for the user to ask a question -->
+                <label for="question">Ask a Question:</label>
+                <textarea id="question" name="question" placeholder="Type your question here"></textarea>
+    
+                <!-- Adding a Submit button for the form -->
+                <input type="submit" value="Submit">
+            </form>
+        </aside>
+        <section>
+            <img id="disney" src="images/pexels-thatguycraig000-3411135.jpg" alt="disney world by Craig Adderly">
+            <p><strong>(Photo by Craig Adderley: https://www.pexels.com/photo/photo-of-castle-during-daytime-3411135/)</strong></p>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    var email = document.getElementById('email');
+    var confirmEmail = document.getElementById('confirmEmail');
+
+    function checkEmailMatch() {
+        
+        if (email.value !== confirmEmail.value) {
+            confirmEmail.setCustomValidity('Email addresses must match.');
+
+            
+            confirmEmail.style.borderColor = 'red';
+
+            
+            alert('Email addresses do not match. Please enter matching email addresses.');
+        } else {
+            confirmEmail.setCustomValidity('');
+
+            
+            confirmEmail.style.borderColor = 'green';
+
+            
+            alert('Email addresses match. Verification successful.');
+
+
+        }
+    }
+
+    email.addEventListener('change', checkEmailMatch);
+    confirmEmail.addEventListener('change', checkEmailMatch);
+});
+        </script>
+    </div>
+</body>
+</html>

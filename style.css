@@ -1,0 +1,67 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    background-color: #004E71;
+}
+nav a {
+    color: white;
+    padding: 5px;
+    font-size: medium;
+    border-bottom: 5px solid  #004E71;
+    text-decoration: none;
+    transition: border-bottom 0.3s ease-in-out;
+}
+a:hover {
+    border-bottom: 15px solid #f0bf00;  
+    background-color: #004E71;
+}
+nav {
+    background-color: #004E71;
+    padding-top: 10px;
+    position: relative;
+}
+body  {
+    background-image: url(images/SoF-seal.png);
+}
+section {
+    width: 50%;
+    float: left;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+aside {
+    width: 49%;
+    float: right;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+div.gallery {
+    margin: 5px;
+    float: left;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: 50px;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  #disney {
+    width: 100%;
+    height: auto;
+  }
+  table,tr,td, th {
+    border: 1px solid;
+  }
+#seminole {
+    position: relative;
+}
